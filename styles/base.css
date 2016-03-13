@@ -1,0 +1,42 @@
+body {
+  line-height: 1.5;
+  font-size: 100%;
+  color: #313131;
+  margin: 0% 20% 0% 20%;
+  background-color: rgb(114, 141, 165);
+  color: white;
+}
+
+hr {
+  margin: 1em;
+  width: 80%;
+  align: center;
+}
+
+header, footer {
+  font-family: Courier, monospace;
+  text-align: center;
+}
+
+footer {
+  font-size: .7em;
+  margin-top: 2em;
+}
+
+/*TEXT STYLES
+=======================================*/
+p {
+  font-size: 1em;
+}
+
+address {
+  display: inline-block;
+}
+
+/*LINK STYLES
+=======================================*/
+
+a, a:link, a:active {
+  color: white;
+  text-decoration: none;
+}

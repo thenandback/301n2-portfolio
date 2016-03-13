@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <title>Blog</title>
+    <link rel="stylesheet" href="vendor/styles/normalize.css">
+    <link rel="stylesheet" href="styles/icons.css">
+    <link rel="stylesheet" href="styles/base.css">
+    <link rel="stylesheet" href="styles/modules.css">
+  </head>
+  <body>
+    <header class="site-header">
+      <h1>
+        Austin's Blog!
+      </h1>
+      <p>~~~Welcome~~~</p>
+    </header>
+    <nav class="main-nav">
+      <ul>
+        <!-- DONE: Use one of the icons from the available set for each of these nav items... -->
+        <li class="tab icon-checkmark" data-content="articles"><a href="#"> Home</a></li>
+        <li class="tab icon-checkmark" data-content="about"><a href="#"> About</a></li>
+        <li><a href="http://twitter.com/kanyewest" class = "icon-checkmark" target="_blank"> Twitter</a></li>
+        <li><a href="http://github.com/thenandback" class = "icon-checkmark" target="_blank"> GitHub</a></li>
+      </ul>
+    </nav>
+    <main>
+      <section id="articles" class="tab-content">
+        <div>
+          <ul id="filters">
+            <li>
+              <select id="author-filter">
+                <option value="">-- Filter by Authors --</option>
+              </select>
+            </li>
+            <li>
+              <select id="category-filter">
+                <option value="">-- Filter by Categories --</option>
+              </select>
+            </li>
+          </ul>
+        </div>
+        <article class="template" data-category="" data-author="">
+          <header>
+            <h1>Title</h1>
+            <div class="byline">
+              By <address><a href="">Author Name</a></address>
+              published <time pubdate datetime="2000-01-01">Publish Time</time>
+            </div>
+          </header>
+          <section class="article-body"></section>
+          <a href="#" class="read-on">Read on &rarr;</a>
+        </article>
+      </section>
+      <section id="about" class="tab-content">
+        <header>
+          <h1>Some things about me:</h1>
+        </header>
+        <section>
+          <ul>
+            <li>Wow</li>
+            <li>Yes for sure</li>
+            <li>That sounds wonderwow doesn't it?</li>
+          </ul>
+        </section>
+      </section>
+    </main>
+    <footer>
+      &copy; 2015 Code Fellows | Static Blog | Happy Ipsum!
+    </footer>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+    <script src="scripts/blogArticles.js"></script>
+    <script src="scripts/article.js"></script>
+    <script src="scripts/articleView.js"></script>
+
+
+    <!-- DONE: Link up the new js file that will manage the article "View". -->
+  </body>
+</html>
