@@ -16,6 +16,12 @@
   display: inline-block;
 }
 
+.entry { /*Save this for media query large display*/
+  float: left;
+  width: 44%;
+  margin-left: 3%;
+}
+
 .article-body, .article-body p {
   overflow: hidden;
   position: relative;
@@ -30,7 +36,9 @@
   border: solid;
 }
 
-.imgContainer:nth-of-type(2n+2) { /* DOESN'T WORK ENTIRELY */
+
+
+.righty { 
   margin: .3em 0em 0em .7em;
   float: right;
   clear: right;

@@ -33,18 +33,8 @@ articleView.handleMainNav = function() {
   $('.main-nav .tab:first').click();
 };
 
-// articleView.setTeasers = function() {
-// $('.article-body *:nth-of-type(n+2)').hide();
-//
-//   $('#articles').on('click', 'a.read-on' function(e) {
-//     e.preventDefault();
-//     $(this).parent.fadeIn();
-//     $(this).hide();
-//   });
-// };
-
 articleView.setTeasers = function() {
-  $('.article-body *:nth-of-type(n+2)').hide(); // Hide elements beyond the first 2 in any artcile body.
+  $('.article-body *:nth-of-type(n+2)').hide(); // Hide elements beyond the first 3 in any artcile body.
 
   $('#articles').on('click', 'a.read-on', function(e) {
     e.preventDefault();

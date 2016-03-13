@@ -35,16 +35,33 @@ rawData.sort(function(a,b) {
 
 rawData.forEach(function(ele) {
   articles.push(new Article(ele));
-})
+});
 
-articles.forEach(function(a){
-  $('#articles').append(a.toHtml())
+articles.forEach(function(element){ // allows .entry to create columns if needed. setTeaser complicates order.
+  var leftHeight = $('#left').position().top + $('#left').outerHeight(true);
+  var rightHeight = $('#right').position().top + $('#right').outerHeight(true);
+  if (leftHeight <= rightHeight) {
+    $('#left').append(element.toHtml());
+  } else {
+    $('#right').append(element.toHtml());
+  }
 });
 
 $('img').wrap('<div class="imgContainer">'); // Standardizing img size
 
-$('.imgContainer').each(function(i) { // images moved to top of <p>
-  $parent = $(this).parent();
-  container = $(this).detach();
-  $parent.prepend(container);
-});
+var imageControl = function() {
+  var shifted = true;
+
+  $('.imgContainer').each(function() {
+    if (shifted) {
+      $(this).addClass('righty'); // manages left/right floating
+    }
+
+    $parent = $(this).parent();
+    $container = $(this).detach();
+    $parent.prepend($container); // images moved to top of <p>
+    shifted = !shifted;
+  });
+}
+
+imageControl();

@@ -17,11 +17,11 @@
     </header>
     <nav class="main-nav">
       <ul>
-        <!-- DONE: Use one of the icons from the available set for each of these nav items... -->
-        <li class="tab icon-checkmark" data-content="articles"><a href="#"> Home</a></li>
-        <li class="tab icon-checkmark" data-content="about"><a href="#"> About</a></li>
-        <li><a href="http://twitter.com/kanyewest" class = "icon-checkmark" target="_blank"> Twitter</a></li>
-        <li><a href="http://github.com/thenandback" class = "icon-checkmark" target="_blank"> GitHub</a></li>
+
+        <li class="tab icon-home" data-content="articles"><a href="#"> Home</a></li>
+        <li class="tab icon-happy" data-content="about"><a href="#"> About</a></li>
+        <li><a href="http://twitter.com/kanyewest" class = "icon-twitter3" target="_blank"> Twitter</a></li>
+        <li><a href="http://github.com/thenandback" class = "icon-github" target="_blank"> GitHub</a></li>
       </ul>
     </nav>
     <main>
@@ -40,6 +40,9 @@
             </li>
           </ul>
         </div>
+        <div id="left" class="entry"></div>
+        <div id="right" class="entry"></div>
+
         <article class="template" data-category="" data-author="">
           <header>
             <h1>Title</h1>
@@ -52,6 +55,7 @@
           <a href="#" class="read-on">Read on &rarr;</a>
         </article>
       </section>
+
       <section id="about" class="tab-content">
         <header>
           <h1>Some things about me:</h1>
@@ -74,7 +78,5 @@
     <script src="scripts/article.js"></script>
     <script src="scripts/articleView.js"></script>
 
-
-    <!-- DONE: Link up the new js file that will manage the article "View". -->
   </body>
 </html>
