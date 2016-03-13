@@ -1,0 +1,49 @@
+#filters select {
+  padding: 0;
+
+}
+
+#filters select {
+  width: 70%;
+}
+
+@media only screen and (min-width: 900px) {
+  .entry { /*Save this for media query large display*/
+    float: left;
+    width: 44%;
+    margin-left: 3%;
+  }
+
+  #filters select {
+    width: 110%;
+    margin: 5%;
+  }
+
+  body {
+    margin: 0% 10% 0% 10%;
+  }
+
+  .main-nav li, #filters li {
+    display: inline-block;
+  }
+
+  .imgContainer {
+    max-width: 20%;
+    max-height: 20%;
+    margin: .3em .7em 0em 0em;
+    float: left;
+    border-color: white;
+    border: solid;
+  }
+
+  .righty {
+    margin: .3em 0em 0em .7em;
+    float: right;
+    clear: right;
+  }
+
+  .article-body, .article-body p {
+    overflow: hidden;
+    position: relative;
+  }
+}

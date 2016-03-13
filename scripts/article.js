@@ -37,13 +37,23 @@ rawData.forEach(function(ele) {
   articles.push(new Article(ele));
 });
 
-articles.forEach(function(element){ // allows .entry to create columns if needed. setTeaser complicates order.
-  var leftHeight = $('#left').position().top + $('#left').outerHeight(true);
-  var rightHeight = $('#right').position().top + $('#right').outerHeight(true);
-  if (leftHeight <= rightHeight) {
-    $('#left').append(element.toHtml());
+// for large windows, adds articles to shortest column
+//for short windows, alternates adding columns (since we can't compare column lengths)
+articles.forEach(function(element, index){
+  if (jQuery(window).width() >= 900) {
+    var leftHeight = $('#left').position().top + $('#left').outerHeight(true);
+    var rightHeight = $('#right').position().top + $('#right').outerHeight(true);
+    if (leftHeight <= rightHeight) {
+      $('#left').append(element.toHtml());
+    } else {
+      $('#right').append(element.toHtml());
+    }
   } else {
-    $('#right').append(element.toHtml());
+    if (index % 2 === 0) {
+      $('#left').append(element.toHtml());
+    } else {
+      $('#right').append(element.toHtml());
+    }
   }
 });
 
