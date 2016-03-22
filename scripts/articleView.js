@@ -1,4 +1,3 @@
-// Configure a view object, to hold all our functions for dynamic updates and article-related event handlers.
 var articleView = {};
 
 articleView.populateFilters = function(content) {
@@ -11,7 +10,7 @@ articleView.populateFilters = function(content) {
   });
 };
 
-articleView.handleFilter = function(primary, secondary) {
+articleView.handleFilter = function(primary) {
   $('#' + primary + '-filter').on('change', function() {
     if ($(this).val()) {
       $('article').hide();
@@ -19,35 +18,21 @@ articleView.handleFilter = function(primary, secondary) {
     } else {
       $('article').show();
     }
-
-    $('#' + secondary + '-filter').val('');
   });
 };
 
 articleView.handleMainNav = function() {
-  $('.main-nav').on('click', 'li.tab', function() {
+  $('#main-nav').on('click', 'li.tab', function() {
     $('section.tab-content').hide();
     $('#' + $(this).data('content')).show();
   });
 
-  $('.main-nav .tab:first').click();
+  $('#main-nav li[data-content="articles"]').click();
 };
 
-articleView.setTeasers = function() {
-  $('.article-body *:nth-of-type(n+2)').hide(); // Hide elements beyond the first 3 in any artcile body.
-
-  $('#articles').on('click', 'a.read-on', function(e) {
-    e.preventDefault();
-    $(this).parent().find('*').fadeIn();
-    $(this).hide();
-  });
-};
 
 $(document).ready(function() {
-  articleView.populateFilters('author');
   articleView.populateFilters('category');
-  articleView.handleFilter('author', 'category');
-  articleView.handleFilter('category', 'author');
+  articleView.handleFilter('category');
   articleView.handleMainNav();
-  articleView.setTeasers();
 });

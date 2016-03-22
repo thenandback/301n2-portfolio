@@ -1,0 +1,33 @@
+#site-header h1 {
+  text-align: left;
+}
+
+body {
+  line-height: 1.5;
+  font-size: 100%;
+  background-color: rgb(114, 141, 165);
+  color: white;
+}
+
+.byline, .read-on {
+  font-family: Courier, monospace;
+  color: rgb(253, 247, 200);
+}
+
+.byline a {
+  font-weight: bold;
+  text-decoration: none;
+}
+
+footer {
+  font-size: .7em;
+}
+
+header, footer {
+  font-family: Courier, monospace;
+}
+
+a, a:link, a:active {
+  color: white;
+  text-decoration: none;
+}
