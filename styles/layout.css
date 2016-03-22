@@ -55,8 +55,8 @@
     border: solid;
   }
 
-  .righty {
-    margin: .3em 0em 0em .7em;
+  .rightImage {
+    margin: .3em 0em 0em .3em;
     float: right;
     clear: right;
   }
