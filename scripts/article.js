@@ -2,9 +2,7 @@ var blogList = [];
 
 function Article (blogData) {
   this.title = blogData.title;
-  this.category = blogData.category;
   this.body = blogData.body;
-  this.pubDate = blogData.publishedOn;
   this.image = blogData.image;
 }
 
@@ -13,12 +11,10 @@ Article.prototype.toHtml = function() {
   var $newArticle = $('article.template').clone();
   $newArticle.removeClass('template');
 
-  $newArticle.attr('data-category', this.category);
   $newArticle.find('.article-header').text(this.title);
   $newArticle.find('.article-body').prepend
     ('<div class="imgContainer"><img src="' + this.image + '" /></div>' + this.body);
-  $newArticle.append('<hr>');
-  $newArticle.find('.pubDate').text(this.pubDate);
+  $newArticle.append('<hr class="articleHr">');
 
   return $newArticle;
 }
@@ -46,16 +42,3 @@ blogList.forEach(function(element, index){
     }
   }
 });
-
-var floatImageRight = function() {
-  var rightImage = true;
-
-  $('.imgContainer').each(function() {
-    if (rightImage) {
-      $(this).addClass('rightImage'); // manages left/right floating
-    }
-    rightImage = !rightImage;
-  });
-}
-
-floatImageRight();

@@ -1,29 +1,17 @@
-#filters {
-  padding: 0;
-  text-align: center;
-}
-
-.links {
-  display: inline-block;
-  clear: both;
-}
-
-#main-nav li, #filters li {
+#main-nav li {
   font-size: 1.5em;
   padding: 0% 1% 0% 1%;
   list-style: none;
   display: inline-block;
 }
 
-#filters li {
-  width: 100%;
+#main-nav .spacer {
+  pointer-events: none;
+  cursor: default;
 }
 
-#category-filter {
-  padding: 0;
-  width: 60%;
-  margin-left: auto;
-  margin-right: auto;
+#mainHr {
+  width: 100%;
 }
 
 .imgContainer {
@@ -32,16 +20,19 @@
   margin-bottom: 4%;
   margin-left: auto;
   margin-right: auto;
+  border-color: black;
+  border: solid;
+  border-width: .3em;
 }
 
-.imgContainer img {
+img {
   width: 100%;
   height: auto;
   vertical-align: bottom;
 }
 
-.byline {
-  padding-bottom: 1em;
+#blogIntro {
+  display: none;
 }
 
 .template {
