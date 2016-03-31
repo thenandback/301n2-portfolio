@@ -9,6 +9,10 @@ body {
   color: black;
 }
 
+.tab:hover {
+  color: green;
+}
+
 footer {
   font-size: .7em;
 }

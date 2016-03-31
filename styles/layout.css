@@ -6,10 +6,8 @@
   #site-header {
     padding: 0;
     margin: 1% 1% 0% 1%;
-    /*border: solid white;*/
     overflow: auto;
   }
-
 
   #main-title {
     display: inline-block;
@@ -31,7 +29,7 @@
     margin-bottom: -100%;
   }
 
-  #main-nav ul li {
+  #main-nav .tab, #main-nav .spacer {
     margin: 0% 1% 0% 1%;
     padding: 0% 1% 0% 1%;
   }
