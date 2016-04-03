@@ -7,16 +7,8 @@ function Article (blogData) {
 }
 
 Article.prototype.toHtml = function() {
-
-  var $newArticle = $('article.template').clone();
-  $newArticle.removeClass('template');
-
-  $newArticle.find('.article-header').text(this.title);
-  $newArticle.find('.article-body').prepend
-    ('<div class="imgContainer"><img src="' + this.image + '" /></div>' + this.body);
-  $newArticle.append('<hr class="articleHr">');
-
-  return $newArticle;
+  var template = Handlebars.compile($('#article-template').text());
+  return template(this);
 }
 
 blogData.forEach(function(ele) {

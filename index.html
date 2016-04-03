@@ -32,12 +32,18 @@
         <div id="leftColumn" class="blogColumn"></div>
         <div id="rightColumn" class="blogColumn"></div>
 
-        <article class="template">
-          <header>
-            <h1 class="article-header"></h1>
-          </header>
-          <section class="article-body"></section>
-        </article>
+        <script id="article-template" type="text/x-handlebars-template">
+          <article>
+            <header>
+              <h1 class="article-header">{{title}}</h1>
+            </header>
+            <div class="imgContainer">
+              <img src="{{image}}" />
+            </div>
+            {{body}}
+            <hr class="articleHr" />
+          </article>
+        </script>
       </section>
 
       <section id="about" class="tab-content">
@@ -61,6 +67,7 @@
     </footer>
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+    <script src="vendor/scripts/handlebars.js"></script>
     <script src="scripts/blogArticles.js"></script>
     <script src="scripts/article.js"></script>
     <script src="scripts/articleView.js"></script>
