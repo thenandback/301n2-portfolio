@@ -1,15 +1,6 @@
 (function(module) {
   var articleView = {};
 
-  articleView.handleMainNav = function() {
-    $('#main-nav').on('click', 'li.tab', function() {
-      $('section.tab-content').hide();
-      $('#' + $(this).data('content')).show();
-    });
-
-    $('#main-nav li[data-content="articles"]').click();
-  };
-
   articleView.attach = function() {
     Article.all.forEach(function(element, index){
       if (jQuery(window).width() >= 900) {
@@ -32,7 +23,6 @@
 
   articleView.initIndexPage = function() {
     articleView.attach();
-    articleView.handleMainNav();
   };
 
   module.articleView = articleView;

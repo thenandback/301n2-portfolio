@@ -8,17 +8,22 @@
     <link rel="stylesheet" href="styles/modules.css">
     <link rel="stylesheet" href="styles/layout.css">
     <link rel="stylesheet" href="styles/themes.css">
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+    <script src="vendor/scripts/handlebars.js"></script>
+    <script src="node_modules/express/lib/express.js"></script>
+    <script src="vendor/scripts/page.js"></script>
   </head>
   <body>
     <header id="site-header">
       <div id="main-title">Austin's Portfolio</div>
       <nav id="main-nav">
         <ul>
-            <li class="tab" data-content="home"><a href="#">Home</a></li>
+            <li class="tab" data-content="home"><a href="home">Home</a></li>
             <li class="spacer"><a href="#">|</a></li>
-            <li class="tab" data-content="about"><a href="#">About</a></li>
+            <li class="tab" data-content="about"><a href="about">About</a></li>
             <li class="spacer"><a href="#">|</a></li>
-            <li class="tab" data-content="articles"><a href="#">Blog</a></li>
+            <li class="tab" data-content="articles"><a href="/">Blog</a></li>
         </ul>
       </nav>
     </header>
@@ -60,18 +65,30 @@
             <div class="fact"></div>
           </div>
       </section>
+
+      <section id="home" class="tab-content">
+        <header>
+          <h1>Some things about me:</h1>
+        </header>
+          <div class="blogColumn" id="myFacts">
+            <div class="fact">One</div>
+            <div class="fact">Two</div>
+            <div class="fact">Three</div>
+            <div class="fact">Four</div>
+          </div>
+      </section>
     </main>
 
     <footer>
       Austin Arias | Thanks for viewing
     </footer>
 
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
-    <script src="vendor/scripts/handlebars.js"></script>
     <script src="scripts/article.js"></script>
     <script src="scripts/articleView.js"></script>
-    <script>
-      Article.fetchAll();
-    </script>
-  </body>
+    <script src="scripts/articlesController.js"></script>
+    <script src="scripts/aboutController.js"></script>
+    <script src="scripts/homeController.js"></script>
+    <script src="scripts/routes.js"></script>
+    <script src="server.js"></script>
+
 </html>

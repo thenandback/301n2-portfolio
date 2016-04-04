@@ -18,7 +18,7 @@
     });
   };
 
-  Article.fetchAll = function () {
+  Article.fetchAll = function (callback) {
     var newETag;
     var destination = '../data/blogArticles.json';
 
@@ -41,7 +41,15 @@
         articleView.initIndexPage();
       });
     }
+
+    callback;
   };
-  
+
+  // Article.count = function() {
+  //   return Article.all.reduce(function(a, b) {
+  //     return a.split(' ').length + b.split(' ').length;
+  //   });
+  // }
+
   module.Article = Article;
 })(window);
