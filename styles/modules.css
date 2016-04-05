@@ -1,0 +1,36 @@
+#main-nav .tab, #main-nav .spacer {
+  font-size: 1.5em;
+  padding: 0% 1% 0% 1%;
+  list-style: none;
+  display: inline-block;
+}
+
+#main-nav .spacer {
+  pointer-events: none;
+  cursor: default;
+}
+
+#mainHr {
+  width: 100%;
+}
+
+.imgContainer {
+  max-width: 80%;
+  clear: both;
+  margin-bottom: 4%;
+  margin-left: auto;
+  margin-right: auto;
+  border-color: black;
+  border: solid;
+  border-width: .3em;
+}
+
+img {
+  width: 100%;
+  height: auto;
+  vertical-align: bottom;
+}
+
+#blogIntro {
+  display: none;
+}

@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <title>Blog</title>
+    <link rel="stylesheet" href="vendor/styles/normalize.css">
+    <link rel="stylesheet" href="styles/base.css">
+    <link rel="stylesheet" href="styles/modules.css">
+    <link rel="stylesheet" href="styles/layout.css">
+    <link rel="stylesheet" href="styles/themes.css">
+  </head>
+  <body>
+    <header id="site-header">
+      <div id="main-title">Austin's Portfolio</div>
+      <nav id="main-nav">
+        <ul>
+            <li class="tab" data-content="home"><a href="#">Home</a></li>
+            <li class="spacer"><a href="#">|</a></li>
+            <li class="tab" data-content="about"><a href="#">About</a></li>
+            <li class="spacer"><a href="#">|</a></li>
+            <li class="tab" data-content="articles"><a href="#">Blog</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <hr id="mainHr">
+
+    <main>
+
+      <section id="articles" class="tab-content">
+        <div id="blogIntro"><img src="http://www.homesteadstencilco.com/fpdb/images/6620.jpeg" /></div>
+        <div id="leftColumn" class="blogColumn"></div>
+        <div id="rightColumn" class="blogColumn"></div>
+
+        <script id="article-template" type="text/x-handlebars-template">
+          <article>
+            <header>
+              <h1 class="article-header">{{title}}</h1>
+            </header>
+            <div class="imgContainer">
+              <img src="{{image}}" />
+            </div>
+            {{body}}
+            <hr class="articleHr" />
+          </article>
+        </script>
+      </section>
+
+      <section id="about" class="tab-content">
+        <header>
+          <h1>Some things about me:</h1>
+        </header>
+          <div class="blogColumn" id="myImg">
+            <img src="images/myImage.jpg" />
+          </div>
+          <div class="blogColumn" id="myFacts">
+            <div class="fact"></div>
+            <div class="fact"></div>
+            <div class="fact"></div>
+            <div class="fact"></div>
+          </div>
+      </section>
+    </main>
+
+    <footer>
+      Austin Arias | Thanks for viewing
+    </footer>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+    <script src="vendor/scripts/handlebars.js"></script>
+    <script src="scripts/blogArticles.js"></script>
+    <script src="scripts/article.js"></script>
+    <script src="scripts/articleView.js"></script>
+
+  </body>
+</html>

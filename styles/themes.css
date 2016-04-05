@@ -1,0 +1,27 @@
+#site-header h1 {
+  text-align: left;
+}
+
+body {
+  line-height: 1.5;
+  font-size: 100%;
+  background-color: rgb(218, 217, 217);
+  color: black;
+}
+
+.tab:hover {
+  color: green;
+}
+
+footer {
+  font-size: .7em;
+}
+
+header, footer {
+  font-family: Courier, monospace;
+}
+
+a, a:link, a:active {
+  color: black;
+  text-decoration: none;
+}

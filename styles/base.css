@@ -1,0 +1,23 @@
+body {
+  line-height: 1.5;
+  padding: 0;
+  margin: 0% 12% 0% 12%;
+}
+
+#site-header {
+  padding-top: 1%;
+}
+
+hr {
+  margin: 1em;
+  align: center;
+}
+
+header, footer {
+  text-align: center;
+}
+
+footer {
+  margin-top: 2em;
+  clear: both;
+}

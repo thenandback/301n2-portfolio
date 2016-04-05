@@ -1,0 +1,71 @@
+@media only screen and (min-width: 900px) {
+  body {
+    margin: 0% 10% 0% 10%;
+  }
+
+  #site-header {
+    padding: 0;
+    margin: 1% 1% 0% 1%;
+    overflow: auto;
+  }
+
+  #main-title {
+    display: inline-block;
+    float: left;
+    padding: 1em;
+    margin: 0;
+    width: 35%;
+    font-size: 125%;
+    vertical-align: top;
+  }
+
+  #main-nav {
+    float: right;
+    width: 55%;
+  }
+
+  #main-title, #main-nav {
+    padding-bottom: 100%;
+    margin-bottom: -100%;
+  }
+
+  #main-nav .tab, #main-nav .spacer {
+    margin: 0% 1% 0% 1%;
+    padding: 0% 1% 0% 1%;
+  }
+
+  #blogIntro {
+    display: block;
+    border: black solid;
+    border-width: .2em;
+    margin-left: 4%;
+    margin-right: 4%;
+    max-width: 92%;
+    max-height: 60%;
+  }
+
+  .blogColumn {
+    float: left;
+    width: 44%;
+    margin-left: 3%;
+  }
+
+  .imgContainer {
+    max-width: 20%;
+    max-height: 20%;
+    margin: .3em .7em 0em 0em;
+    float: left;
+    border-width: .1em;
+  }
+
+  .article-body, .article-body p {
+    overflow: hidden;
+    position: relative;
+  }
+
+  .articleHr {
+    width: 80%;
+    margin-left: 10%;
+    margin-right: 10%;
+  }
+}
