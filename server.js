@@ -1,13 +1,14 @@
 var express = require('express');
 var app = express();
-var port = 4730;
+var port = 5000;
 
 app.use(express.static('./'));
 
-app.get('./', function (req, res) {
+app.get('/*', function (req, res) {
+  console.log('wowowowowowow');
   res.sendFile('index.html', { root: '.'});
 });
 
-app.listen(4730, function() {
+app.listen(port, function() {
   console.log('Port is on ' + port);
 });

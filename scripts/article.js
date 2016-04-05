@@ -45,11 +45,10 @@
     callback;
   };
 
-  // Article.count = function() {
-  //   return Article.all.reduce(function(a, b) {
-  //     return a.split(' ').length + b.split(' ').length;
-  //   });
-  // }
+Article.stats = function() {
+  var numArticles = Article.all.length;
+  $('#fact').text("Number of articles: " + numArticles);
+};
 
   module.Article = Article;
 })(window);
