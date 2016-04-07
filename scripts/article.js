@@ -9,7 +9,7 @@ function Article (blogData) {
 Article.prototype.toHtml = function() {
   var template = Handlebars.compile($('#article-template').text());
   return template(this);
-}
+};
 
 blogData.forEach(function(ele) {
   blogList.push(new Article(ele));
