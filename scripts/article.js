@@ -9,7 +9,7 @@ Article.all = [];
 Article.prototype.toHtml = function() {
   var template = Handlebars.compile($('#article-template').text());
   return template(this);
-}
+};
 
 Article.loadAll = function (blogData) {
   blogData.forEach(function(ele) {
@@ -27,7 +27,7 @@ Article.fetchAll = function () {
   }).success(
     function (data, message, xhr) {
       newETag = xhr.getResponseHeader('ETag');
-  });
+    });
 
   if (localStorage.blogData && localStorage.eTag === newETag) {
     Article.loadAll(JSON.parse(localStorage.blogData));
