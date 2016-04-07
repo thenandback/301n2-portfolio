@@ -10,7 +10,7 @@
   Article.prototype.toHtml = function() {
     var template = Handlebars.compile($('#article-template').text());
     return template(this);
-  }
+  };
 
   Article.loadAll = function (blogData) {
     blogData.map(function(ele) {
@@ -28,7 +28,7 @@
     }).success(
       function (data, message, xhr) {
         newETag = xhr.getResponseHeader('ETag');
-    });
+      });
 
     if (localStorage.blogData && localStorage.eTag === newETag) {
       Article.loadAll(JSON.parse(localStorage.blogData));
@@ -45,10 +45,10 @@
     callback;
   };
 
-Article.stats = function() {
-  var numArticles = Article.all.length;
-  $('#fact').text("Number of articles: " + numArticles);
-};
+  Article.stats = function() {
+    var numArticles = Article.all.length;
+    $('#fact').text('Number of articles: ' + numArticles);
+  };
 
   module.Article = Article;
 })(window);
