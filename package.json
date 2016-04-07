@@ -1,0 +1,23 @@
+{
+  "name": "301n2-portfolio",
+  "version": "1.0.0",
+  "description": "Homework 7 Assignment",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/thenandback/301n2-portfolio.git"
+  },
+  "author": "Austin",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/thenandback/301n2-portfolio/issues"
+  },
+  "homepage": "https://github.com/thenandback/301n2-portfolio#readme",
+  "dependencies": {
+    "express": "^4.13.4",
+    "page": "^1.7.1"
+  }
+}
