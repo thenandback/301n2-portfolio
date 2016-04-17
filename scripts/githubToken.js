@@ -1,2 +1,2 @@
-var githubToken = "0460238054cd092bb5fa5f6dd89148fdc43f29b6";
+var githubToken = "fb02970a18168f1ec8f1afa2e974dfae1b839b2b";
 var user = "thenandback";

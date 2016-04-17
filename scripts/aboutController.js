@@ -1,16 +1,23 @@
 (function (module) {
   var aboutController = {};
 
+  var templating = function (about) {
+    var template = Handlebars.compile($('#about-template').text());
+    return template(about);
+  };
 
-var render = function (about) {
-  var template = Handlebars.compile($('#about-template').text());
-  return template(about);
-};
+  templating(about);
 
-aboutController.index = function () {
-  $('.tab-content').hide();
-  $('#about-template').fadeIn();
-};
+  var render = function () {
+    $('.tab-content').hide();
+    $('#about').fadeIn();
+  };
+
+  aboutController.index = function() {
+    render();
+
+    $('myRepo').append(about.all);
+  };
 
   module.aboutController = aboutController;
 })(window);

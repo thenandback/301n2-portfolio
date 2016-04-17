@@ -51,23 +51,25 @@
         </script>
       </section>
 
-      <section id="about-template" class="tab-content">
-        <header>
-          <h1>Some things about me:</h1>
-        </header>
-          <div class="blogColumn" id="myImg">
-            <img src="images/myImage.jpg" />
-          </div>
-          <div></div>
+      <section id="about" class="tab-content">
+        <script id="about-template" type="text/x-handlebars-template">
+          <header>
+            <h1>Some things about me:</h1>
+          </header>
+            <div class="blogColumn" id="myImg">
+              <img src="images/myImage.jpg" />
+            </div>
+            <div class="blogColumn" id="myRepo">{{name}}</div>
+        </script>
       </section>
 
       <section id="home" class="tab-content">
         <header>
           <h1>Home Page</h1>
         </header>
-          <div class="blogColumn" id="myFacts">
-            <div id="fact"></div>
-          </div>
+        <div class="blogColumn" id="myFacts">
+          <div id="fact"></div>
+        </div>
       </section>
     </main>
 
@@ -75,6 +77,7 @@
       Austin Arias | Thanks for viewing
     </footer>
 
+    <script src="scripts/about.js"></script>
     <script src="scripts/article.js"></script>
     <script src="scripts/articleView.js"></script>
     <script src="scripts/articlesController.js"></script>

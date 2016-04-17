@@ -18,11 +18,5 @@
     .done(callback);
   };
 
-  about.with = function (attr) {
-    return about.all.filter(function (repo) {
-      return repo[attr];
-    });
-  };
-
   module.about = about;
 })(window);
