@@ -15,7 +15,7 @@ app.get('/github/*', proxyGitHub);
 
 app.use(express.static('./'));
 
-app.get('/*', function (req, res) {
+app.get('*', function (req, res) {
   console.log('wowowowowowow');
   res.sendFile('index.html', { root: '.'});
 });

@@ -51,17 +51,23 @@
         </script>
       </section>
 
-      <section id="about" class="tab-content">
-        <script id="about-template" type="text/x-handlebars-template">
-          <header>
-            <h1>Some things about me:</h1>
-          </header>
-            <div class="blogColumn" id="myImg">
-              <img src="images/myImage.jpg" />
-            </div>
-            <div class="blogColumn" id="myRepo">{{name}}</div>
-        </script>
-      </section>
+
+      <script id="about-template" type="text/x-handlebars-template">
+        <header>
+          <h1>Some things about me:</h1>
+        </header>
+          <div class="blogColumn" id="myImg">
+            <img src="images/myImage.jpg" />
+          </div>
+
+          <div class="blogColumn">
+            {{#each summaries}}
+            <div>{{name}}</div>
+            {{/each}}
+          </div>
+      </script>
+
+      <section id="about" class="tab-content"></section>
 
       <section id="home" class="tab-content">
         <header>

@@ -9,14 +9,14 @@
   templating(about);
 
   var render = function () {
-    $('.tab-content').hide();
-    $('#about').fadeIn();
+
   };
 
   aboutController.index = function() {
     render();
-
-    $('myRepo').append(about.all);
+    $('.tab-content').hide();
+    $('#about').fadeIn();
+    $('#about').empty().append(templating(about.all));
   };
 
   module.aboutController = aboutController;
