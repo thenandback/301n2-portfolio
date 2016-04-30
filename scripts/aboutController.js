@@ -2,18 +2,13 @@
   var aboutController = {};
 
   var templating = function (about) {
-    var template = Handlebars.compile($('#about-template').text());
+    var template = Handlebars.compile($('#about-template').html());
     return template(about);
   };
 
   templating(about);
 
-  var render = function () {
-
-  };
-
   aboutController.index = function() {
-    render();
     $('.tab-content').hide();
     $('#about').fadeIn();
     $('#about').empty().append(templating(about.all));
